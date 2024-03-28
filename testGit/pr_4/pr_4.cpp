@@ -15,6 +15,26 @@ bool SortCheck(int* arr, int sizeOfArr) {
 
 int main() {
 
+	const int size_arr = 10;
+	int find_value;
+
+	int* arr = new int[size_arr];
+
+	for (int i = 0; i < size_arr; ++i) {
+		std::cout << "Element [" << i << "] >> ";
+		std::cin >> arr[i];
+	}
+
+	std::cout << "Enter value to find it in array >> ";
+	std::cin >> find_value;
+
+	for (int i = 0; i < size_arr; ++i) {
+		if (arr[i] == find_value) {
+			std::cout << "Found! Element with index [" << i << "] has same value '" << find_value << "'" << std::endl;
+			break;
+		}
+	}
+
 	const int arrSize = 10;
 	int user_value, count(0);
 
